@@ -1,0 +1,8 @@
+train: /root/big/ultralytics/datasets/images/train
+#train: D:\big\data\images\train
+# val: D:\big\data\images\val
+val: /root/big/ultralytics/datasets/images/val
+# number of classes
+nc: 8
+# class names
+names: ['0', '1','2', '3','4', '5','6', '7']

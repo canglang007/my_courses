@@ -1,0 +1,9 @@
+train: /root/big/ultralytics/datasets/images/train
+val: /root/big/ultralytics/datasets/images/val
+test: /root/big/ultralytics/datasets/images/test
+
+# number of classes
+nc: 2
+
+# class names
+names: ['head', 'helmet']
