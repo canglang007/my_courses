@@ -11,8 +11,9 @@ import click
 import torch.nn.functional as F
 import numpy as np
 from unet.unet_model import UNet
+from pspnet import PSPNet
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = "1"
+# os.environ['CUDA_VISIBLE_DEVICES'] = "1"
 
 
 @click.command()
@@ -37,6 +38,7 @@ def train(data_path, models_path, backend, snapshot, crop_x, crop_y, batch_size,
     train_loader = DataLoader(traindata, batch_size=batch_size, shuffle=True, num_workers=64)
 
     net = UNet(3, 2).cuda(0)
+    net = PSPNet(2)
     # 损失函数
     seg_criterion = nn.CrossEntropyLoss().cuda(0)
     # 优化器
