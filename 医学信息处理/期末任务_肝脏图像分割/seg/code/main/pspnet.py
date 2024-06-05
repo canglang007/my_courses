@@ -1,8 +1,7 @@
 import torch
 from torch import nn
 from torch.nn import functional as F
-
-import extractor2
+import main.backbone as extractor2
 
 
 class PSPModule(nn.Module):
